@@ -9,6 +9,7 @@ const title = "Sorting Articles";
 function App({articles}) {
     const [listOfArticles , setListOfArticles ] = useState(articles)
 
+    /* Everyting is on desc order, from higher to lower */
     const date = () => {
         var articlesNew = [];
         articlesNew = [...listOfArticles];
@@ -22,7 +23,7 @@ function App({articles}) {
                 return 1
             }
             return 0;*/
-            return date_2 - date_1; // 2020-2019 = 1 (positive number) ; 2019 < 2020
+            return date_2 - date_1; // SHORTCUT!! ex: 2020-2019 = 1 (positive number) ; 2019 < 2020
         })
         setListOfArticles(articlesNew)
     }
@@ -31,10 +32,11 @@ function App({articles}) {
         articlesNew = [...listOfArticles]
         // Sort by upvotes
         articlesNew.sort((first,second) => {
-            /* return value: Default,For ascending order
+            /* For ascending order
                 > 0 : sort b before a ; a is greater than b
                 < 0 : sort a before b ; a is less than b 
               === 0 : keep original order of a and b , a must be equal to b
+              but because this is desc order, everything is reversed!!!!!
             */
 
       
