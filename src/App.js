@@ -13,8 +13,8 @@ function App({articles}) {
         var articlesNew = [];
         articlesNew = [...listOfArticles];
         articlesNew.sort((first,second) => {
-            const date_1 = new Date(first.date);
-            const date_2 = new Date(second.date);
+            const date_1 = new Date(first.date); // ex: 2019 ,
+            const date_2 = new Date(second.date); // ex: 2020
            /* if (date_1 > date_2) {
                 return -1
             }
@@ -22,7 +22,7 @@ function App({articles}) {
                 return 1
             }
             return 0;*/
-            return date_2 - date_1; // shortcut
+            return date_2 - date_1; // 2020-2019 = 1 (positive number) ; 2019 < 2020
         })
         setListOfArticles(articlesNew)
     }
