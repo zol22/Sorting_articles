@@ -22,7 +22,7 @@ function App({articles}) {
                 return 1
             }
             return 0;*/
-            return date_2 - date_1;
+            return date_2 - date_1; // shortcut
         })
         setListOfArticles(articlesNew)
     }
